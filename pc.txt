@@ -1,0 +1,20 @@
+git clone https://github.com/0xlane/wechat-dump-rs.git
+
+vim ~/.cargo/config
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+[env]
+LIBCLANG_PATH='d:\\clangllvm\\lib'
+
+download
+https://objects.githubusercontent.com/github-production-release-asset-2e65be/75821432/216a2537-eed9-475a-b02b-065719c5f0c9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250517%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250517T065240Z&X-Amz-Expires=300&X-Amz-Signature=1e7afbe45be1121cb5e2d485c33417c8035502e6ec0587d31c42acbfe9cd68e3&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dclang%2Bllvm-20.1.5-x86_64-pc-windows-msvc.tar.xz&response-content-type=application%2Foctet-stream
+
+
+https://objects.githubusercontent.com/github-production-release-asset-2e65be/19416551/21a14927-4b3a-43cb-bca2-0bc46fd82b4f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250517%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250517T072612Z&X-Amz-Expires=300&X-Amz-Signature=032a40ddabcbac999e6a1196c7920d77a88c4c22ef4b89c4940bf53c13a7bd01&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DDB.Browser.for.SQLite-v3.13.1-win64.zip&response-content-type=application%2Foctet-stream
+
+
+cargo build --release
+./target/release/wechat-dump-rs.exe  get the key
+
+get the db key
+./target/release/wechat-dump-rs.exe -k c57ea6f3b3c04c09933cb153aeacae6d31f09f762e5d41988203f2e8b6d1dd7a  -f d:\\wx\\MSG0.db  -r --vv  3
